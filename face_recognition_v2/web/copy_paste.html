@@ -1,0 +1,42 @@
+<html>
+<head>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function () 
+{
+ $('#modify_div').bind('cut copy paste', function (e) 
+ {
+  e.preventDefault();
+ });
+
+ $("#modify_div").on("contextmenu",function(e)
+ {
+  return false;
+ });
+});
+
+
+</script>
+<style type="text/css">
+    #modify_div{
+        width: 600px;
+        border:  1px solid black;
+        padding:  10px;
+        margin: 25px;
+    }
+
+</style>
+</head>
+<body>
+    <p id="demo"></p>
+    <div id="wrapper" >
+        <div id="modify_div" >
+            <p>What is microprossesor ?</p>
+            <form>
+                <textarea rows="3"  cols="70" required></textarea>
+                <input type="submit" value="Submit" >
+            </form>
+        </div>
+    </div>
+</body>
+</html>

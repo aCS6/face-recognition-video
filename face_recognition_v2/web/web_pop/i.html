@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <title>
+      Window moveTo() Method
+    </title>
+    <style>
+        h1 {
+            color: green;
+        }
+    </style>
+</head>
+ 
+<body>
+    <center>
+        <h1>Geeks for Geeks</h1>
+        <button onclick="openWin()">
+          Create
+      </button>
+        <button onclick="moveWin()">
+          Move
+      </button>
+ 
+        <script>
+            var myWindow;
+ 
+            function openWin() {
+                myWindow =
+                  window.open("http://127.0.0.1:5500/i.html",
+                              "_self",
+                              "width=200",
+                              "height=100");
+                // myWindow.moveTo(500, 100);
+                myWindow.resizeTo(200, 100)
+                myWindow.focus();
+               
+                myWindow.document.write(
+                  "<p>This is 'myWindow'</p>");
+                myWindow.document.write(
+                  "<button onclick='moveWin()'>Move</button> ");
+            }
+ 
+            function moveWin() {
+                myWindow.moveTo(500, 100);
+                myWindow.resizeTo(1366, 728)
+                myWindow.focus();
+            }
+        </script>
+    </center>
+</body>
+ 
+</html>

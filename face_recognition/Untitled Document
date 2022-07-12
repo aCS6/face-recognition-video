@@ -1,0 +1,19 @@
+https://www.youtube.com/playlist?list=PLnjEM1fs09cGGjdCLSue8Kw7GmWDhGlMh
+
+
+
+outDict = {
+  'Nahid' : "89",
+  'salman' : "90"
+}
+
+
+name = 'salman'
+
+if name not in outDict:
+  outDict[name] = '45'
+else:
+  del outDict[name]
+
+print(outDict)
+

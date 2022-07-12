@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function myFunction() {
+  if (window.top != window.self)  {
+    document.getElementById("demo").innerHTML = "This window is not the topmost window! Am I in a frame?";
+  } else { 
+    document.getElementById("demo").innerHTML = "This window is the topmost window!";
+  } 
+}z
+</script>
+</head>
+<body>
+
+<button onclick="myFunction()">Check window</button>
+
+<p id="demo"></p>
+
+</body>
+</html>

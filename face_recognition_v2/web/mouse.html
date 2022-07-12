@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+
+<style>
+	*{
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+	}
+
+
+#exam{
+  width: 100%;
+  height: 500px;
+  border: 2px solid black;
+padding:20px;
+  text-align: justify;
+}
+</style>
+</head>
+<body >
+
+<div   id="exam" onmouseout="clearCoor()" onmousemove="myFunction(event)">
+<p>
+     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque varius in velit id efficitur. Vivamus dolor nunc, egestas imperdiet eros non, luctus pretium leo. Suspendisse mauris lorem, volutpat ac dui nec, aliquam blandit arcu. In fringilla magna ante, et viverra lorem auctor vel. Quisque laoreet venenatis tellus, non porta est dictum ut. Praesent nec justo sed magna volutpat malesuada non eu purus. Nullam tristique erat eu auctor placerat. Sed sit amet eros sem. Proin justo tortor, suscipit et ipsum vitae, posuere gravida magna. Sed rhoncus rhoncus dolor, sed fermentum lectus gravida et. Etiam non urna et urna pellentesque viverra at a ipsum. Duis gravida tellus eu orci tempus, a pretium neque porta. Sed eu leo nisl. Fusce nec nisl elementum tellus euismod tempus.
+
+    Vivamus vehicula gravida urna, ut rhoncus nisi gravida a. Suspendisse auctor sodales elit sit amet imperdiet. Quisque congue dolor nunc, at tincidunt libero varius id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse ante quam, venenatis nec consequat vitae, elementum in purus. Donec eget condimentum leo, sed rhoncus metus. Nunc quis diam at felis egestas gravida. Sed fringilla augue lectus, ac tempor mauris consequat quis. Pellentesque vestibulum facilisis diam sit amet accumsan. Donec sed sollicitudin leo. Vivamus fringilla tortor eget ligula vulputate, vitae condimentum nibh ullamcorper. Mauris sagittis nisl vitae finibus tempus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque iaculis diam eu lacinia laoreet. Praesent posuere molestie leo, laoreet fermentum elit faucibus ac. 
+
+</p>
+</div>
+
+
+<p id="demo"></p>
+
+<script>
+
+
+function myFunction(e) {
+  var x = e.clientX;
+  var y = e.clientY;
+  var coor = "Coordinates: (" + x + "," + y + ")";
+  document.getElementById("demo").innerHTML = coor;
+}
+
+function clearCoor() {
+  document.getElementById("demo").innerHTML = "Exam Cancelled     !!!!!";
+  document.getElementById("exam").style.display="none";
+
+}
+
+document.onkeypress = function (e) {
+    e = e || window.event;
+    console.log(e.keyCode)
+};
+</script>
+
+</body>
+</html>

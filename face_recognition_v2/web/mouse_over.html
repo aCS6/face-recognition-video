@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>mouseover demo</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      div.out {
+        width: 100%;
+        height: 500px;
+        margin: 0px;
+        overflow-x: auto;
+        border: 1px solid red;
+        overflow: auto;
+      }
+      div.in {
+        padding: 20px;
+        width: 90%;
+        height: 1300px;
+        margin-top:20px;
+        margin: 10px auto;
+        border: 2px solid gray;
+      }
+
+      textarea {
+        font-size: 20px;
+        resize: none;
+      }
+      hr {
+        margin-top: 4px;
+        margin-bottom: 4px;
+      }
+    </style>
+    <script src="jquery.js"></script>
+  </head>
+  <body>
+    <div class="out">
+      <div class="in">
+        <table>
+          <tr>
+            <td><b>Q-1)</b> What is Microprocessor ?</td>
+          </tr>
+          <tr>
+           <td>
+            <textarea
+            id="textarea"
+            rows="5"
+            cols="80"
+            placeholder="Answer for Q-1"
+          ></textarea>
+           </td>
+          </tr>
+        </table>
+
+      </div>
+    </div>
+    <p id="demo"></p>
+    <script>
+      $(document).ready(function () {
+        $("div.in").bind("cut copy paste", function (e) {
+          e.preventDefault();
+        });
+
+        $("div.in").on("contextmenu", function (e) {
+          return false;
+        });
+      });
+
+      $("div.out")
+        .mouseover(function () {
+          $("#demo").html("In Exam");
+          $("div.out").css("display", "block");
+        })
+        .mouseout(function () {
+          $("#demo").html("Exam Cancelled !!!");
+          $("div.out").css("display", "none");
+        });
+    </script>
+  </body>
+</html>

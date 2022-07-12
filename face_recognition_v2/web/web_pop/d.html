@@ -1,0 +1,17 @@
+<html>
+<head>
+	<!-- Bug 
+	https://stackoverflow.com/questions/8581294/window-moveto-not-working-in-google-developer-tool
+	-->
+	<script language="JavaScript">
+		function maximizeme(){
+			window.self.moveTo(0, 0);
+			console.log(window.self);
+			window.self.resizeTo(1366, 728)
+			window.self.focus()
+		}
+	</script>
+<body>
+	<a href="javascript:onclick=maximizeme()">Maximize</a>
+</body>
+</html>

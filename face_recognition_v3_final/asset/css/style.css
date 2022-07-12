@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+button{
+    padding: 10px 3px 10px 3px;
+    border-radius: 3px;
+    background-color: indigo;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 2px;
+}
+
+
+#container{
+    width: 500px;
+    margin: 0 auto;
+}
+
+#demo{
+    display: none;
+}
